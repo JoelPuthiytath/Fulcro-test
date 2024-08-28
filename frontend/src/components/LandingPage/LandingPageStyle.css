@@ -1,0 +1,164 @@
+/* @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 10%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animated-background {
+    background: linear-gradient(45deg, rgb(87, 40, 198), rgb(143, 94, 249), rgb(22, 155, 219));
+    background-size: 800% 800%;
+    animation: gradientAnimation 15s ease infinite;
+
+
+} */
+.animated-background {
+    margin: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+    background: linear-gradient(315deg, #7131ce 3%, #6f2acc 38%, #5b48cd 58%, #2596be 100%);
+    animation: gradient-wave 15s ease infinite;
+    background-size: 200% 200%;
+    background-attachment: fixed;
+    position: relative;
+  }
+
+  @keyframes gradient-wave {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+  .wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: absolute;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+  }
+
+  .wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+  }
+
+  @keyframes wave {
+    2% {
+      transform: translateX(1);
+    }
+    25% {
+      transform: translateX(-25%);
+    }
+    50% {
+      transform: translateX(-50%);
+    }
+    75% {
+      transform: translateX(-25%);
+    }
+    100% {
+      transform: translateX(1);
+    }
+  }
+
+
+
+
+  /* .waveWrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 20vh);
+    top: 0;
+    overflow: hidden;
+  }
+
+  .top {
+    opacity: 0.5;
+    z-index: 15;
+  }
+
+  .mid {
+    opacity: 0.75;
+    z-index: 10;
+  }
+
+  .bottom {
+    z-index: 5;
+  }
+
+  .wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat !important;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+  }
+
+  .waveTop {
+    background-size: 50% 100px;
+    background-image: url('../../assets/wave-animation/wave-top.png');
+    animation: wave 3s infinite;
+    animation-delay: 1s;
+  }
+
+  .waveMid {
+    background-size: 50% 120px;
+    background-image: url('../../assets/wave-animation/wave-mid.png');
+    animation: wave 10s linear infinite;
+  }
+
+  .waveBottom {
+    background-size: 50% 100px;
+    background-image: url('../../assets/wave-animation/wave-bot.png');
+    animation: wave 15s linear infinite;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: translateX(0) translateZ(0) scaleY(1);
+    }
+    50% {
+      transform: translateX(-25%) translateZ(0) scaleY(0.50);
+    }
+    100% {
+      transform: translateX(-50%) translateZ(0) scaleY(1);
+    }
+  } */
