@@ -21,7 +21,7 @@ import FulcroIcon from "../../assets/FulcroIcon.png"
 import FulcroIconBlue from "../../assets/FulcroIconBlue.png"
 
 
-
+// Menu items for dropdowns
 const servicesMenuItems = [
   { title: "Web Development" },
   { title: "App Development" },
@@ -34,6 +34,7 @@ const aboutMenuItems = [
   { title: "Careers" },
 ];
 
+// Menu items for dropdowns
 
 function DropdownMenu({ title,textColor,items }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -59,6 +60,8 @@ function DropdownMenu({ title,textColor,items }) {
     </Menu>
   );
 }
+
+// NavList Component
 
 function NavList({ textColor }) {
   return (
@@ -88,6 +91,8 @@ function NavList({ textColor }) {
     </List>
   );
 }
+
+// NavigationBar Component
 
 function NavigationBar() {
   const [openNav, setOpenNav] = useState(false);

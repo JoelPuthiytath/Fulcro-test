@@ -24,12 +24,13 @@ const TitleWithSubtitles = ({ title, subtitles, subtitleLinks, icon }) => {
             className="font-[500] leading-[36px] legacy:leading-[28px] 2xl:leading-[36px] capitalize service-list-item 2xl:text-[20px] text-[16px] legacy:text-[18px] xl:mb-4 lg:mb-2 "
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ amount: 0.5 }}
+            viewport={{ amount: 0.3 ,once:true}}
             transition={{
               delay: index * 0.2,
               duration: 0.3,
               ease: 'easeOut'
             }}
+
           >
             <a href={subtitleLinks[index]}>{subtitle}</a>
           </motion.li>
@@ -156,7 +157,7 @@ const Service = () => {
           />
         </div>
         <motion.div
-          className="pin-spacer bg-transparent hidden md:block"
+          className=" bg-transparent hidden md:block"
           initial={{ height: '80vh', opacity: 1 }}
           animate={controls}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
@@ -167,7 +168,7 @@ const Service = () => {
 
   {/* Right Side */}
 
-  <div className="right lg:w-1/2 w-full sticky top-10 min-h-full lagacy:flex items-start justify-center lg:py-16 hidden lg:flex">
+  <div className="right lg:w-1/2 w-full min-h-full lagacy:flex items-start justify-center lg:py-16 hidden lg:flex">
     <img src={expertiseImg} alt="Consulting" className="max-w-full h-auto sticky top-10" />
   </div>
 </div>
